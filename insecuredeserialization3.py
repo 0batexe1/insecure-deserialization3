@@ -94,7 +94,7 @@ def log_network_traffic(url):
 
 # ----------------- Esnek API Gönderim Yapılandırması -----------------
 def send_payload_via_api(api_url, payload):
-    response = requests.post(api_url, data={"payload": payload})
+    response = requests.post(api_url, data={"payload": payload}, verify=False)
     print(f"API'ye gönderilen payload: {payload} - Yanıt: {response.status_code}")
 
 # ----------------- Dinamik API'den Payload Alma -----------------
